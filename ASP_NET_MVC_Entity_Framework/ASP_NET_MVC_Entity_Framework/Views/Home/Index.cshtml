@@ -1,0 +1,56 @@
+﻿@using ASP_NET_MVC_Entity_Framework.Models
+@model dynamic
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h4>Customers</h4>
+    <hr />
+    <table cellpadding="4" cellspacing="4" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        @foreach (Customer customer in Model.abc)
+        {
+            <tr>
+                <td>@customer.CustomerId</td>
+                <td>@customer.CustomerName</td>
+                <td>@customer.CustomerCity</td>
+                <td>@customer.CustomerCountry</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <h4>Staffs</h4>
+    <hr />
+    <table cellpadding="4" cellspacing="4" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        @foreach (Staff staff in Model.xyz)
+        {
+            <tr>
+                <td>@staff.StaffId</td>
+                <td>@staff.StaffName</td>
+                <td>@staff.StaffCity</td>
+                <td>@staff.StaffCountry</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
